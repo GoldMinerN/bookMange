@@ -83,7 +83,8 @@ public class BookTestController {
     @RequestMapping("/bookMange/{current}/{size}")
     @ResponseBody
     public Result getBookPage(@PathVariable long current, @PathVariable long size,Book book){
-//        System.out.println("参数==》"+book);
+        //  这是一个显示测试
+        //  System.out.println("参数==》"+book);
         IPage<Book> page = bookService.getBookPage(current, size ,book);
         return Result.ok().data("items",page);
     }
